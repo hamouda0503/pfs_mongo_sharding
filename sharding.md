@@ -124,6 +124,8 @@ show Collections
 
 ```
 
+sharding a collection 
+```
 db.movies.getShardDistribution()
 
 sh.enableSharding("sharddemo")
