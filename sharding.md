@@ -121,6 +121,7 @@ Create Collections
 db.createCollection("movies")
 
 show Collections
+
 ```
 
 db.movies.getShardDistribution()
@@ -195,6 +196,7 @@ db.movies.insertMany([
 check 
 ```
 db.movies.find() 
+
 db.movies.count()
 
 db.movies.getShardDistribution()
