@@ -96,7 +96,11 @@ Add shard
 mongos> sh.addShard("shard2rs/192.168.1.67:50004,192.168.1.67:50005,192.168.1.67:50006")
 mongos> sh.status()
 ```
+
+ckeck docker containers 
+```
 docker ps
+```
 
 ### Example 
 ### Collection Sharding 
@@ -109,7 +113,7 @@ use sharddemo
 check db and Collections
 ```
 db
-
+show Collections
 ```
 
 Create Collections
@@ -126,6 +130,8 @@ sh.enableSharding("sharddemo")
 sh.shardCollection("sharddemo.movies",{"title":"hashed"})
 
 db.movies.getShardDistribution()
+
+
 ```
 
 inserting data into mongodb collection 
@@ -184,10 +190,14 @@ db.movies.insertMany([
     }
 ])
 
+```
+
+check 
+```
 db.movies.find() 
 db.movies.count()
 
 db.movies.getShardDistribution()
 
-
+```
 
